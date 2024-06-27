@@ -15,4 +15,4 @@
 	url = https://github.com/markmoxon/elite-universe-editor.git
 [submodule "dfsimage"]
 	path = dfsimage
-	url = https://github.com/monkeyman79/dfsimage.git
+	url = https://github.com/markmoxon/dfsimage.git
