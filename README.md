@@ -1,10 +1,10 @@
-# Elite Compendium
+# Elite Compendium for the BBC Micro with 16K sideways RAM
 
-[BBC Micro cassette Elite](https://github.com/markmoxon/cassette-elite-beebasm) | [BBC Micro disc Elite](https://github.com/markmoxon/disc-elite-beebasm) | [6502 Second Processor Elite](https://github.com/markmoxon/6502sp-elite-beebasm) | [BBC Master Elite](https://github.com/markmoxon/master-elite-beebasm) | [Acorn Electron Elite](https://github.com/markmoxon/electron-elite-beebasm) | [NES Elite](https://github.com/markmoxon/nes-elite-beebasm) | [Elite-A](https://github.com/markmoxon/elite-a-beebasm) | [Teletext Elite](https://github.com/markmoxon/teletext-elite) | [Elite Universe Editor](https://github.com/markmoxon/elite-universe-editor) | **Elite Compendium** | [Elite over Econet](https://github.com/markmoxon/elite-over-econet) | [Flicker-free Commodore 64 Elite](https://github.com/markmoxon/c64-elite-flicker-free) | [BBC Micro Aviator](https://github.com/markmoxon/aviator-beebasm) | [BBC Micro Revs](https://github.com/markmoxon/revs-beebasm) | [Archimedes Lander](https://github.com/markmoxon/archimedes-lander)
+[BBC Micro cassette Elite](https://github.com/markmoxon/cassette-elite-beebasm) | [BBC Micro disc Elite](https://github.com/markmoxon/disc-elite-beebasm) | [6502 Second Processor Elite](https://github.com/markmoxon/6502sp-elite-beebasm) | [BBC Master Elite](https://github.com/markmoxon/master-elite-beebasm) | [Acorn Electron Elite](https://github.com/markmoxon/electron-elite-beebasm) | [NES Elite](https://github.com/markmoxon/nes-elite-beebasm) | [Elite-A](https://github.com/markmoxon/elite-a-beebasm) | [Teletext Elite](https://github.com/markmoxon/teletext-elite) | [Elite Universe Editor](https://github.com/markmoxon/elite-universe-editor) | [Elite Compendium](https://github.com/markmoxon/elite-compendium) | **Elite Compendium (BBC Micro)** | [Elite over Econet](https://github.com/markmoxon/elite-over-econet) | [Flicker-free Commodore 64 Elite](https://github.com/markmoxon/c64-elite-flicker-free) | [BBC Micro Aviator](https://github.com/markmoxon/aviator-beebasm) | [BBC Micro Revs](https://github.com/markmoxon/revs-beebasm) | [Archimedes Lander](https://github.com/markmoxon/archimedes-lander)
 
 ![Screenshot of the Elite Compendium menu screen](https://www.bbcelite.com/images/elite_compendium/menu.png)
 
-This repository contains source code for the Elite Compendium for the BBC Master 128.
+This repository contains source code for the Elite Compendium for the BBC Micro with 16K sideways RAM.
 
 The Elite Compendium is a collection of the very best of Acornsoft Elite, updated with as many hacks and enhancements as I've been able to fit in. If you're looking to play 8-bit Elite, then this is a pretty good place to start. For more information, see the [bbcelite.com website](https://www.bbcelite.com/hacks/elite_compendium.html).
 
@@ -16,7 +16,7 @@ See the individual subprojects for more information.
 
 * [BBC Micro disc Elite](https://github.com/markmoxon/disc-elite-beebasm)
 * [6502 Second Processor Elite](https://github.com/markmoxon/6502sp-elite-beebasm)
-* [BBC Master Elite](https://github.com/markmoxon/master-elite-beebasm)
+* [BBC Micro cassette Elite](https://github.com/markmoxon/cassette-elite-beebasm)
 * [Teletext Elite](https://github.com/markmoxon/teletext-elite)
 * [Elite Universe Editor](https://github.com/markmoxon/elite-universe-editor)
 
@@ -24,7 +24,7 @@ See the individual subprojects for more information.
 
 BBC Micro Elite was written by Ian Bell and David Braben and is copyright &copy; Acornsoft 1984.
 
-The code on this site has been reconstructed from a disassembly of the version released on [Ian Bell's personal website](http://www.elitehomepage.org/).
+The code on this site is identical to the source discs released on [Ian Bell's personal website](http://www.elitehomepage.org/) (it's just been reformatted to be more readable).
 
 6502 Second Processor Elite was written by Ian Bell and David Braben and is copyright &copy; Acornsoft 1985.
 
@@ -45,6 +45,10 @@ Thanks to the Bitshifters for their help in building the [musical version of BBC
 The following archives from Ian Bell's personal website form the basis for this project:
 
 * [BBC Elite, disc version](http://www.elitehomepage.org/archive/a/a4100000.zip)
+
+* [Cassette sources as a disc image](http://www.elitehomepage.org/archive/a/a4080602.zip)
+
+* [Cassette sources as text files](http://www.elitehomepage.org/archive/a/a4080610.zip)
 
 * [6502 Second Processor sources as a disc image](http://www.elitehomepage.org/archive/a/a5022201.zip)
 

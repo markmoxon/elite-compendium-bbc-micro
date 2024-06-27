@@ -5,7 +5,7 @@ VDU 23;8202;0;0;0;
 secpro%=FALSE
 O%=0:A%=&00:X%=&01
 master%=(USR(&FFF4) AND &FF00)=&300
-IF NOT master% THEN PROCnotmaster
+IF master% THEN PROCnotmaster
 A%=&EA:X%=&00:Y%=&FF
 IF (USR(&FFF4) AND &FF00) THEN secpro%=TRUE
 *RUN SCREEN
@@ -26,9 +26,9 @@ PROCrun
 END
 
 DEF PROCrun
-IF O%=0 PROCmaster
+IF O%=0 PROCbbcdisc
 IF O%=1 PROCsecpro
-IF O%=2 PROCbbcdisc
+IF O%=2 PROCbbccassette
 IF O%=3 PROCteletext
 IF O%=4 PROCeditor
 ENDPROC
@@ -84,10 +84,10 @@ IF K%=136 OR K%=137 THEN PROCinfo
 UNTIL K%=13
 ENDPROC
 
-DEF PROCmaster
+DEF PROCbbcdisc
 IF secpro% THEN PROCdisablesecpro
 *DRIVE 2
-CHAIN "ELITEM"
+CHAIN "ELITED"
 ENDPROC
 
 DEF PROCsecpro
@@ -96,10 +96,10 @@ IF NOT secpro% THEN PROCenablesecpro
 CHAIN "ELITE65"
 ENDPROC
 
-DEF PROCbbcdisc
+DEF PROCbbccassette
 IF secpro% THEN PROCdisablesecpro
 *DRIVE 2
-CHAIN "ELITED"
+CHAIN "ELITEC"
 ENDPROC
 
 DEF PROCteletext
@@ -109,7 +109,7 @@ CHAIN "ELITETT"
 ENDPROC
 
 DEF PROCeditor
-IF secpro% THEN PROCdisablesecpro
+IF NOT secpro% THEN PROCenablesecpro
 *DRIVE 2
 *DIR V
 *RUN ELITEUE
@@ -132,18 +132,19 @@ PRINTTAB(0,0);CHR$(131);"       ] for menu, RETURN to play";
 FOR I%=5TO13:PRINTTAB(0,I%);CHR$(134);:NEXT
 PRINTTAB(0,14);CHR$(130);
 PRINTTAB(0,15);CHR$(130);
-IF O%=0 PROCsh(5,"Elite with all the bells and whistles"):PROCsh(7,"Flicker-free ships and planets"):PROCsh(8,"Music with volume control")
-IF O%=0 PROCsh(9,"Docking computer improvements"):PROCsh(10,"The epic Trumbles mission"):PROCsh(11,"Red lasers for enemy fire"):PROCsh(12,"Bug fixes and more")
+IF O%=0 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the following enhancements"):PROCsh(8,"Flicker-free ships and planets")
+IF O%=0 PROCsh(9,"Music with volume control"):PROCsh(10,"Volume control for sound effects")
 IF O%=1 PROCsh(5,"Fast Elite with the following extras"):PROCsh(7,"Flicker-free ships and planets"):PROCsh(8,"Music with volume control")
-IF O%=1 PROCsh(9,"Volume control for sound effects"):PROCsh(10,"Speed adjusted to be playable"):PROCsh(12,"Requires a 6502/65C102 co-processor")
-IF O%=2 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the following enhancements"):PROCsh(8,"Flicker-free ships and planets")
-IF O%=2 PROCsh(9,"Music with volume control"):PROCsh(10,"Volume control for sound effects"):PROCsh(11,"Updated to run on the BBC Master")
+IF O%=1 PROCsh(9,"Volume control for sound effects"):PROCsh(10,"Speed adjusted to be playable")
+IF O%=2 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the following enhancements"):PROCsh(8,"Flicker-free ships")
+IF O%=2 PROCsh(9,"Music with volume control"):PROCsh(10,"Volume control for sound effects")
 IF O%=3 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the following enhancements"):PROCsh(8,"Converted to run entirely in teletext")
 IF O%=3 PROCsh(9,"Flicker-free ships and planets"):PROCsh(10,"Music with volume control"):PROCsh(11,"Volume control for sound effects"):PROCsh(12,"Ceefax option for the market page")
 IF O%=4 PROCsh(5,"Create your own 3D scenarios in Elite"):PROCsh(7,CHR$(34)+"Press play"+CHR$(34)+" to bring them to life"):PROCsh(9,"Comes with lots of example universes")
 IF O%=4 PROCsh(11,"See bbcelite.com/hacks for instructions")
-IF O%<>1 PROCsh(14,"For the BBC Master 128")
-IF O%=1 PROCsh(14,"For the BBC Master Turbo")
+IF O%=0 OR O%=3 PROCsh(14,"For the BBC Micro with 16K Sideways RAM")
+IF O%=2 PROCsh(14,"For the standard BBC Micro")
+IF O%=1 OR O%=4 PROCsh(14,"For the BBC Micro + co-pro + 16K SRAM")
 PROCsh(15,"See www.bbcelite.com for more details")
 REPEAT
 K%=GET
@@ -157,8 +158,9 @@ L%=O%
 ENDPROC
 
 DEF PROCnotmaster
-PRINT"Sorry, the Elite Compendium only works"
-PRINT"on a BBC Master."
+PRINT"Sorry, this version of the Elite"
+PRINT"Compendium only works on a BBC"
+PRINT"Micro."
 END
 ENDPROC
 
@@ -193,12 +195,12 @@ END
 ENDPROC
 
 REM  "----------------------------------"
-DATA "BBC Master 128 Elite"
-DATA "The best version of Acornsoft Elite"
-DATA "6502 Second Processor Elite"
-DATA "The best version of co-pro Elite"
 DATA "BBC Micro disc Elite"
 DATA "The best version of original Elite"
+DATA "6502 Second Processor Elite"
+DATA "The best version of co-pro Elite"
+DATA "BBC Micro cassette Elite"
+DATA "The best version of tape Elite"
 DATA "Teletext Elite"
 DATA "Classic Elite with added Ceefax"
 DATA "Elite Universe Editor"

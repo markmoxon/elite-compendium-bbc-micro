@@ -27,22 +27,22 @@
 \
 \ ******************************************************************************
 
-\ Elite music ROM
+\ Elite music ROM (incorporating extra code from disc version)
 
- PUTFILE "elite-music/elite-music.rom", "MUSIC", &008000, &008000
+ PUTFILE "disc-elite-beebasm/3-assembled-output/elite-music.rom", "MUSIC", &008000, &008000
 
-\ BBC Master Elite (Compendium version) = CHAIN "ELITEM"
+\ BBC Micro cassette Elite (Flicker-free version) = CHAIN "ELITEC"
 
- PUTFILE "master-elite-beebasm/3-assembled-output/M128Elt.bin", "M128Elt", &FF0E00, &FF0E43
- PUTFILE "master-elite-beebasm/3-assembled-output/BDATA.bin", "BDATA", &000000, &000000
- PUTFILE "master-elite-beebasm/3-assembled-output/BCODE.bin", "BCODE", &000000, &000000
- PUTBASIC "master-elite-beebasm/1-source-files/music/load-music.bas", "ELITEM"
+ PUTFILE "cassette-elite-beebasm/1-source-files/basic-programs/$.ELITE.bin", "ELITEC", &FF1900, &FF8023
+ PUTFILE "cassette-elite-beebasm/3-assembled-output/ELITE.bin", "ELTdata", &FF1100, &FF2000
+ PUTFILE "cassette-elite-beebasm/3-assembled-output/ELTcode.bin", "ELTcode", &FF1128, &FF1128
 
 \ Elite Universe Editor (BBC Master version) = *DIR V : *RUN ELITEUE
 
- PUTFILE "elite-universe-editor/master-elite/3-assembled-output/M128Elt.bin", "V.ELITEUE", &FF0E00, &FF0E43
- PUTFILE "elite-universe-editor/master-elite/3-assembled-output/BDATA.bin", "V.BDATA", &000000, &000000
- PUTFILE "elite-universe-editor/master-elite/3-assembled-output/BCODE.bin", "V.BCODE", &000000, &000000
+ PUTFILE "elite-universe-editor/6502sp-elite/3-assembled-output/ELITE.bin", "V.ELITEUE", &FF1FDC, &FF2085
+ PUTFILE "elite-universe-editor/6502sp-elite/3-assembled-output/ELITEa.bin", "V.IELITEa", &FF2000, &FF2000
+ PUTFILE "elite-universe-editor/6502sp-elite/3-assembled-output/I.CODE.bin", "V.ICODE", &FF2400, &FF2C89
+ PUTFILE "elite-universe-editor/6502sp-elite/3-assembled-output/P.CODE.bin", "V.PCODE", &000E3C, &00106A
  PUTFILE "elite-universe-editor/universe-editor/universe-files/U.BOXART1.bin", "U.BOXART1", &000000, &000000
  PUTFILE "elite-universe-editor/universe-editor/universe-files/U.BOXART2.bin", "U.BOXART2", &000000, &000000
  PUTFILE "elite-universe-editor/universe-editor/universe-files/U.BOXARTC.bin", "U.BOXARTC", &000000, &000000
@@ -62,6 +62,7 @@
 \ Disc Elite (Compendium version) = CHAIN "ELITED", which does *DRIVE 0 : *RUN ELITED
 
  PUTBASIC "disc-elite-beebasm/1-source-files/music/load-music-drive-2.bas", "ELITED"
+ PUTFILE "disc-elite-beebasm/1-source-files/music/SRLoad.bin", "SRLOAD", &FF0900, &FF093D
 
 \ Teletext Elite (Compendium version) = CHAIN "ELITETT", which does *DRIVE 0 : *RUN ELITET
 
