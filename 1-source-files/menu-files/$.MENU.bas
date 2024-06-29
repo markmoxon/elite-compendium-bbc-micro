@@ -136,15 +136,15 @@ IF O%=0 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the follow
 IF O%=0 PROCsh(9,"Music with volume control"):PROCsh(10,"Volume control for sound effects")
 IF O%=1 PROCsh(5,"Fast Elite with the following extras"):PROCsh(7,"Flicker-free ships and planets"):PROCsh(8,"Music with volume control")
 IF O%=1 PROCsh(9,"Volume control for sound effects"):PROCsh(10,"Speed adjusted to be playable")
-IF O%=2 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the following enhancements"):PROCsh(8,"Flicker-free ships")
-IF O%=2 PROCsh(9,"Music with volume control"):PROCsh(10,"Volume control for sound effects")
+IF O%=2 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with flicker-free ships")
 IF O%=3 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the following enhancements"):PROCsh(8,"Converted to run entirely in teletext")
 IF O%=3 PROCsh(9,"Flicker-free ships and planets"):PROCsh(10,"Music with volume control"):PROCsh(11,"Volume control for sound effects"):PROCsh(12,"Ceefax option for the market page")
 IF O%=4 PROCsh(5,"Create your own 3D scenarios in Elite"):PROCsh(7,CHR$(34)+"Press play"+CHR$(34)+" to bring them to life"):PROCsh(9,"Comes with lots of example universes")
 IF O%=4 PROCsh(11,"See bbcelite.com/hacks for instructions")
 IF O%=0 OR O%=3 PROCsh(14,"For the BBC Micro with 16K Sideways RAM")
+IF O%=1 PROCsh(14,"For the BBC Micro + co-pro + 16K SRAM")
 IF O%=2 PROCsh(14,"For the standard BBC Micro")
-IF O%=1 OR O%=4 PROCsh(14,"For the BBC Micro + co-pro + 16K SRAM")
+IF O%=4 PROCsh(14,"For the BBC Micro + 6502 co-processor")
 PROCsh(15,"See www.bbcelite.com for more details")
 REPEAT
 K%=GET
