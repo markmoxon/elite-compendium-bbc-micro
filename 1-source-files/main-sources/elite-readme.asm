@@ -30,7 +30,10 @@
  EQUB 10, 13
  EQUS "---------------------------------------"
  EQUB 10, 13
- EQUS "Acornsoft Elite (compendium version)"
+ EQUS "Acornsoft Elite (Compendium version)"
+ EQUB 10, 13
+ EQUB 10, 13
+ EQUS "For the BBC Micro with 16K sideways RAM"
  EQUB 10, 13
  EQUB 10, 13
  EQUS "Contains flicker-free routines, music"
