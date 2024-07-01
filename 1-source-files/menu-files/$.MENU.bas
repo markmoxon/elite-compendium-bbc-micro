@@ -8,6 +8,7 @@ master%=(USR(&FFF4) AND &FF00)=&300
 IF master% THEN PROCnotmaster
 A%=&EA:X%=&00:Y%=&FF
 IF (USR(&FFF4) AND &FF00) THEN secpro%=TRUE
+IF NOT secpro% THEN PROCfixIntegraB
 *RUN SCREEN
 U%=INKEY(200)
 UH$="  "+CHR$(130)
@@ -186,6 +187,37 @@ PRINT
 PRINT"Please plug in your co-processor and"
 PRINT"try booting the disc again."
 END
+ENDPROC
+
+DEF PROCfixIntegraB
+DIM CODE% 50
+P%=CODE%
+ZP=&70
+[OPT 0
+.IntegraFix
+ SEI
+ LDA &FFB7
+ STA ZP
+ LDA &FFB8
+ STA ZP+1
+ LDY #&A
+.prlp1
+ LDA (ZP),Y
+ STA &0200,Y
+ INY
+ CPY #&12
+ BNE prlp1
+ LDY #&2A
+.prlp2
+ LDA (ZP),Y
+ STA &0200,Y
+ INY
+ CPY #&30
+ BNE prlp2
+ CLI
+ RTS
+]
+CALL IntegraFix
 ENDPROC
 
 REM  "----------------------------------"
