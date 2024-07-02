@@ -16,3 +16,6 @@
 [submodule "6502sp-elite-universe-editor"]
 	path = 6502sp-elite-universe-editor
 	url = https://github.com/markmoxon/6502sp-elite-universe-editor.git
+[submodule "library-elite-universe-editor"]
+	path = library-elite-universe-editor
+	url = https://github.com/markmoxon/library-elite-universe-editor.git
