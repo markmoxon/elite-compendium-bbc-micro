@@ -42,7 +42,6 @@
 
 \ BBC Micro cassette Elite (Flicker-free version) = CHAIN "ELITEC"
 
- PUTFILE "cassette-elite-beebasm/1-source-files/basic-programs/$.ELITE.bin", "ELITE2C", &FF1900, &FF8023
  PUTFILE "cassette-elite-beebasm/3-assembled-output/ELITE.bin", "ELTdata", &FF1100, &FF2000
  PUTFILE "cassette-elite-beebasm/3-assembled-output/ELTcode.bin", "ELTcode", &FF1128, &FF1128
  PUTBASIC "cassette-elite-beebasm/1-source-files/music/load-music.bas", "ELITEC"
