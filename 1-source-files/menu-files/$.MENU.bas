@@ -143,9 +143,8 @@ IF O%=3 PROCsh(5,"The classic 1984 BBC Micro release"):PROCsh(6,"with the follow
 IF O%=3 PROCsh(9,"Flicker-free ships and planets"):PROCsh(10,"Music and sounds with volume control"):PROCsh(11,"Trumbles & improved docking computer"):PROCsh(12,"Ceefax option for the market page")
 IF O%=4 PROCsh(5,"Create your own 3D scenarios in Elite"):PROCsh(6,"and "+CHR$(34)+"Press play"+CHR$(34)+" to bring them to life"):PROCsh(8,"Comes with lots of example universes")
 IF O%=4 PROCsh(9,"including the iconic screenshot from"):PROCsh(10,"the back of the Acornsoft box"):PROCsh(12,"See bbcelite.com/hacks for instructions")
-IF O%=0 OR O%=3 PROCsh(14,"For the BBC Micro with 16K sideways RAM")
+IF O%=0 OR O%=2 OR O%=3 PROCsh(14,"For the BBC Micro with 16K sideways RAM")
 IF O%=1 PROCsh(14,"For the BBC Micro + co-pro + 16K SRAM")
-IF O%=2 PROCsh(14,"For the standard BBC Micro")
 IF O%=4 PROCsh(14,"For the BBC Micro + 6502 co-processor")
 PROCsh(15,"See www.bbcelite.com for more details")
 REPEAT
