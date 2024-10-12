@@ -34,17 +34,17 @@
 
 \ Elite music ROM (incorporating extra code from disc version)
 
- PUTFILE "disc-elite-beebasm/3-assembled-output/elite-music.rom", "MUSIC", &008000, &008000
+ PUTFILE "elite-source-code-bbc-micro-disc/3-assembled-output/elite-music.rom", "MUSIC", &008000, &008000
 
 \ Elite music ROM (incorporating extra code from cassette version)
 
- PUTFILE "cassette-elite-beebasm/3-assembled-output/elite-music.rom", "MUSICC", &008000, &008000
+ PUTFILE "elite-source-code-bbc-micro-cassette/3-assembled-output/elite-music.rom", "MUSICC", &008000, &008000
 
 \ BBC Micro cassette Elite (Flicker-free version) = CHAIN "ELITEC"
 
- PUTFILE "cassette-elite-beebasm/3-assembled-output/ELITE.bin", "ELTdata", &FF1100, &FF2000
- PUTFILE "cassette-elite-beebasm/3-assembled-output/ELTcode.bin", "ELTcode", &FF1128, &FF1128
- PUTBASIC "cassette-elite-beebasm/1-source-files/music/load-music.bas", "ELITEC"
+ PUTFILE "elite-source-code-bbc-micro-cassette/3-assembled-output/ELITE.bin", "ELTdata", &FF1100, &FF2000
+ PUTFILE "elite-source-code-bbc-micro-cassette/3-assembled-output/ELTcode.bin", "ELTcode", &FF1128, &FF1128
+ PUTBASIC "elite-source-code-bbc-micro-cassette/1-source-files/music/load-music.bas", "ELITEC"
 
 \ Elite Universe Editor (BBC Master version) = *DIR V : *RUN ELITEUE
 
@@ -62,16 +62,16 @@
 
 \ 6502SP Elite (Compendium version) = CHAIN "ELITE65"
 
- PUTFILE "6502sp-elite-beebasm/3-assembled-output/ELITE.bin", "ELITE", &FF1FDC, &FF2085
- PUTFILE "6502sp-elite-beebasm/3-assembled-output/ELITEa.bin", "I.ELITEa", &FF2000, &FF2000
- PUTFILE "6502sp-elite-beebasm/3-assembled-output/I.CODE.bin", "I.CODE", &FF2400, &FF2C89
- PUTFILE "6502sp-elite-beebasm/3-assembled-output/P.CODE.bin", "P.CODE", &000E3C, &00106A
- PUTBASIC "6502sp-elite-beebasm/1-source-files/music/load-music.bas", "ELITE65"
+ PUTFILE "elite-source-code-6502-second-processor/3-assembled-output/ELITE.bin", "ELITE", &FF1FDC, &FF2085
+ PUTFILE "elite-source-code-6502-second-processor/3-assembled-output/ELITEa.bin", "I.ELITEa", &FF2000, &FF2000
+ PUTFILE "elite-source-code-6502-second-processor/3-assembled-output/I.CODE.bin", "I.CODE", &FF2400, &FF2C89
+ PUTFILE "elite-source-code-6502-second-processor/3-assembled-output/P.CODE.bin", "P.CODE", &000E3C, &00106A
+ PUTBASIC "elite-source-code-6502-second-processor/1-source-files/music/load-music.bas", "ELITE65"
 
 \ Disc Elite (Compendium version) = CHAIN "ELITED", which does *DRIVE 0 : *RUN ELITED
 
- PUTBASIC "disc-elite-beebasm/1-source-files/music/load-music-drive-2.bas", "ELITED"
- PUTFILE "disc-elite-beebasm/1-source-files/music/SRLoad.bin", "SRLOAD", &FF0900, &FF093D
+ PUTBASIC "elite-source-code-bbc-micro-disc/1-source-files/music/load-music-drive-2.bas", "ELITED"
+ PUTFILE "elite-source-code-bbc-micro-disc/1-source-files/music/SRLoad.bin", "SRLOAD", &FF0900, &FF093D
 
 \ Teletext Elite (Compendium version) = CHAIN "ELITETT", which does *DRIVE 0 : *RUN ELITET
 
