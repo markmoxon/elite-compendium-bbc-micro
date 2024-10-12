@@ -4,12 +4,6 @@
 [submodule "dfsimage"]
 	path = dfsimage
 	url = https://github.com/markmoxon/dfsimage.git
-[submodule "6502sp-elite-universe-editor"]
-	path = 6502sp-elite-universe-editor
-	url = https://github.com/markmoxon/6502sp-elite-universe-editor.git
-[submodule "library-elite-universe-editor"]
-	path = library-elite-universe-editor
-	url = https://github.com/markmoxon/library-elite-universe-editor.git
 [submodule "elite-source-code-6502-second-processor"]
 	path = elite-source-code-6502-second-processor
 	url = https://github.com/markmoxon/elite-source-code-6502-second-processor.git
@@ -19,3 +13,9 @@
 [submodule "elite-source-code-bbc-micro-disc"]
 	path = elite-source-code-bbc-micro-disc
 	url = https://github.com/markmoxon/elite-source-code-bbc-micro-disc.git
+[submodule "elite-universe-editor-library"]
+	path = elite-universe-editor-library
+	url = https://github.com/markmoxon/elite-universe-editor-library.git
+[submodule "elite-universe-editor-6502-second-processor"]
+	path = elite-universe-editor-6502-second-processor
+	url = https://github.com/markmoxon/elite-universe-editor-6502-second-processor.git
