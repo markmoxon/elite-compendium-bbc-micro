@@ -159,33 +159,34 @@ L%=O%
 ENDPROC
 
 DEF PROCnotmaster
-PRINT"Sorry, this version of the Elite"
-PRINT"Compendium only works on a BBC Micro."
-PRINT'"There is a separate version for the"
-PRINT"BBC Master. See bbcelite.com/hacks for"
-PRINT"more details."
+PRINT"I'm sorry, this version of the Elite"
+PRINT"Compendium only works on the BBC Micro"
+PRINT"and BBC Micro B+."
+PRINT'"There is a separate version available"
+PRINT"for the BBC Master."
+PRINT'"See bbcelite.com/hacks for more details."
 END
 ENDPROC
 
 DEF PROCdisablesecpro
 VDU26
 CLS
-PRINT"Sorry, this version of Elite will not"
-PRINT"run on a 6502 Second Processor."
+PRINT"I'm sorry, this version of Elite will"
+PRINT"not run on a 6502 Second Processor."
 PRINT
-PRINT"Please unplug your co-processor and"
-PRINT"try booting the disc again."
+PRINT"Please disable your co-processor and"
+PRINT"try booting the disc again."'
 END
 ENDPROC
 
 DEF PROCenablesecpro
 VDU26
 CLS
-PRINT"Sorry, this version of Elite needs a"
-PRINT"6502 Second Processor."
+PRINT"I'm sorry, this version of Elite needs"
+PRINT"a 6502 Second Processor."
 PRINT
-PRINT"Please plug in your co-processor and"
-PRINT"try booting the disc again."
+PRINT"Please enable your co-processor and"
+PRINT"try booting the disc again."'
 END
 ENDPROC
 
