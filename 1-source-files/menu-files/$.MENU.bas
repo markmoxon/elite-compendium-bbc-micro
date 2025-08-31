@@ -146,7 +146,7 @@ IF O%=4 PROCsh(9,"including the iconic screenshot from"):PROCsh(10,"the back of 
 IF O%=0 OR O%=2 OR O%=3 PROCsh(14,"For the BBC Micro with 16K sideways RAM")
 IF O%=1 PROCsh(14,"For the BBC Micro + co-pro + 16K SRAM")
 IF O%=4 PROCsh(14,"For the BBC Micro + 6502 co-processor")
-PROCsh(15,"See www.bbcelite.com for more details")
+PROCsh(15,"See bbcelite.com/hacks for details")
 REPEAT
 K%=GET
 UNTIL K%=136 OR K%=137 OR K%=13
@@ -164,7 +164,7 @@ PRINT"Compendium only works on the BBC Micro"
 PRINT"and BBC Micro B+."
 PRINT'"There is a separate version available"
 PRINT"for the BBC Master."
-PRINT'"See bbcelite.com/hacks for more details."
+PRINT'"See bbcelite.com/hacks for details."'
 END
 ENDPROC
 
