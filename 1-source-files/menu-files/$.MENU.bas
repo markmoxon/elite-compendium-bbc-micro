@@ -88,24 +88,28 @@ ENDPROC
 DEF PROCbbcdisc
 IF secpro% THEN PROCdisablesecpro
 *DRIVE 2
+HIMEM=&3C00
 CHAIN "ELITED"
 ENDPROC
 
 DEF PROCsecpro
 IF NOT secpro% THEN PROCenablesecpro
 *DRIVE 2
+HIMEM=&3C00
 CHAIN "ELITE65"
 ENDPROC
 
 DEF PROCbbccassette
 IF secpro% THEN PROCdisablesecpro
 *DRIVE 2
+HIMEM=&3C00
 CHAIN "ELITEC"
 ENDPROC
 
 DEF PROCteletext
 IF secpro% THEN PROCdisablesecpro
 *DRIVE 2
+HIMEM=&3C00
 CHAIN "ELITETT"
 ENDPROC
 

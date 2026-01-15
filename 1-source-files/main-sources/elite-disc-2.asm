@@ -71,7 +71,6 @@
 \ Disc Elite (Compendium version) = CHAIN "ELITED", which does *DRIVE 0 : *RUN ELITED
 
  PUTBASIC "elite-source-code-bbc-micro-disc/1-source-files/music/load-music-drive-2.bas", "ELITED"
- PUTFILE "elite-source-code-bbc-micro-disc/1-source-files/music/SRLoad.bin", "SRLOAD", &FF0900, &FF093D
 
 \ Teletext Elite (Compendium version) = CHAIN "ELITETT", which does *DRIVE 0 : *RUN ELITET
 
