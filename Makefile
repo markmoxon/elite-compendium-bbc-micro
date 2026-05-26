@@ -1,15 +1,22 @@
 BEEBASM?=beebasm
+DISC?=oaknut-disc
+DSD?=3-compiled-game-discs/elite-compendium-bbc-micro.dsd
 
 .PHONY:all
-all:
+all: build-ssd build-dsd
+
+.PHONY:build-ssd
+build-ssd:
 	$(BEEBASM) -i 1-source-files/main-sources/elite-readme.asm
-	$(BEEBASM) -i 1-source-files/main-sources/elite-disc-1.asm -do 2-assembled-output/side1.ssd -opt 3 -title "CompendiumB0"
-	$(BEEBASM) -i 1-source-files/main-sources/elite-disc-2.asm -do 2-assembled-output/side2.ssd -title "CompendiumB2"
-	dfsimage create 3-compiled-game-discs/elite-compendium-bbc-micro.dsd
-	dfsimage backup --title="Compendium B" --bootopt=EXEC --from 2-assembled-output/side1.ssd --to -1 3-compiled-game-discs/elite-compendium-bbc-micro.dsd
-	dfsimage backup --title="Compendium B" --from 2-assembled-output/side2.ssd --to -2 3-compiled-game-discs/elite-compendium-bbc-micro.dsd
-	cp 2-assembled-output/side1.ssd 3-compiled-game-discs/elite-compendium-bbc-micro-drive-0.ssd
-	cp 2-assembled-output/side2.ssd 3-compiled-game-discs/elite-compendium-bbc-micro-drive-2.ssd
+	$(BEEBASM) -i 1-source-files/main-sources/elite-disc-1.asm -do 3-compiled-game-discs/elite-compendium-bbc-micro-drive-0.ssd -opt 3 -title "CompendiumB0"
+	$(BEEBASM) -i 1-source-files/main-sources/elite-disc-2.asm -do 3-compiled-game-discs/elite-compendium-bbc-micro-drive-2.ssd -title "CompendiumB2"
+
+.PHONY:build-dsd
+build-dsd:
+	$(DISC) create $(DSD) --title "Compendium B"
+	$(DISC) opt $(DSD) EXEC
+	$(DISC) cp -r "3-compiled-game-discs/elite-compendium-bbc-micro-drive-0.ssd:*" $(DSD)
+	$(DISC) cp -r "3-compiled-game-discs/elite-compendium-bbc-micro-drive-2.ssd:*" $(DSD)::2.
 
 .PHONY:b2
 b2:
