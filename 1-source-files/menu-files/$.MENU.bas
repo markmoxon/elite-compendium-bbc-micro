@@ -117,7 +117,7 @@ DEF PROCeditor
 IF NOT secpro% THEN PROCenablesecpro
 *DRIVE 2
 *DIR V
-*RUN ELITEUE
+CHAIN "ELITEUE"
 ENDPROC
 
 DEF PROCsh(Y%,T$)
